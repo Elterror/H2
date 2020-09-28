@@ -3,6 +3,7 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
+
         NumberTester t = new NumberTester("Data");
 
         t.setOddEvenTester((number) -> (number % 2) == 0);
@@ -19,7 +20,7 @@ public class Main {
             return true;
         });
 
-        t.setPrimeTester((number) -> {
+        t.setPalindromeTester((number) -> {
             int palindrome = number; // copied number into variable
             int reverse = 0;
 
@@ -29,8 +30,6 @@ public class Main {
                 palindrome = palindrome / 10;
             }
 
-            // if original and reverse of number is equal means
-            // number is palindrome in Java
             if (number == reverse) {
                 return true;
             }
@@ -38,6 +37,8 @@ public class Main {
 
 
         });
+
+        t.testFile();
 
 
     }
