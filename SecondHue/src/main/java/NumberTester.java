@@ -2,13 +2,16 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class NumberTester {
-    public Map<Integer, Integer> numbers = new HashMap<>();
+    Operator operator;
+    List<Operator> list = new ArrayList<>();
 
     public NumberTester(String fileName) {
 
@@ -20,7 +23,8 @@ public class NumberTester {
             line = br.readLine();
             while (line != null) {
                 String[] spliter = line.split(" ");
-                numbers.put(Integer.parseInt(spliter[0]), Integer.parseInt(spliter[1]));
+                operator = new Operator(Integer.parseInt(spliter[0]), Integer.parseInt(spliter[1]));
+                list.add(operator);
                 line = br.readLine();
             }
             br.close();
@@ -48,20 +52,20 @@ public class NumberTester {
     }
 
     public void testFile() {
-        for (int i :
-                numbers.keySet()) {
-            if(i == 1){
-                if(oddTester.testNumber(numbers.get(i))){
+        for (Operator operator :
+                list) {
+            if(operator.getNumber1() == 1){
+                if(oddTester.testNumber(operator.getNumber2())){
                     System.out.println("EVEN");
                 }else System.out.println("UNEVEN");
             }
-            else if (i == 2) {
-                if(primeTester.testNumber(numbers.get(i))){
+            else if (operator.getNumber1() == 2) {
+                if(primeTester.testNumber(operator.getNumber2())){
                     System.out.println("PRIME");
                 }else System.out.println("NOT PRIME");
 
-            }else if (i == 3) {
-                if(palindromeTester.testNumber(numbers.get(i))){
+            }else if (operator.getNumber1() == 3) {
+                if(palindromeTester.testNumber(operator.getNumber2())){
                     System.out.println("PALINDROM");
                 }else System.out.println("NO PALINDROM");
 
