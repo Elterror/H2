@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class HalloJavamitForEach {
-    public List<String> loop = new ArrayList();
+    public List<String> loop = new ArrayList<>();
 
     public void forEach(){
         for (String s :
@@ -12,7 +12,9 @@ public class HalloJavamitForEach {
     }
 
     public void forEachMethod(){
-        loop.forEach();
+        loop.forEach(System.out::println);
     }
+
+
 
 }
