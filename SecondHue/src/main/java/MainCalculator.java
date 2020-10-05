@@ -171,6 +171,7 @@ public class MainCalculator {
             case 4:
                 System.exit(0);
                 break;
+                
         }
 
     }
@@ -186,7 +187,7 @@ public class MainCalculator {
         int eingabe = Integer.parseInt(s.nextLine());
         if (eingabe == 5) {
             operation();
-            
+
         }
         return eingabe;
     }
