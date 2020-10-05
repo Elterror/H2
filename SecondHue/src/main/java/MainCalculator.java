@@ -39,6 +39,7 @@ public class MainCalculator {
         });
 
         RationalCalculator r = new RationalCalculator((Number x, Number y) -> {
+            
 
             double gemN = x.getB() * y.getB();
 
@@ -171,7 +172,7 @@ public class MainCalculator {
                 System.exit(0);
                 break;
         }
-        
+
     }
 
 
