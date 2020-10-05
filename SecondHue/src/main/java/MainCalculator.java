@@ -171,7 +171,6 @@ public class MainCalculator {
                 System.exit(0);
                 break;
         }
-
         
     }
 
