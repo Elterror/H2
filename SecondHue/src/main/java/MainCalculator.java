@@ -168,11 +168,12 @@ public class MainCalculator {
                         break;
                 }
                 break;
+                
             case 4:
                 System.exit(0);
                 break;
 
-                
+
         }
 
     }
