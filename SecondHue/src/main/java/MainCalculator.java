@@ -39,7 +39,7 @@ public class MainCalculator {
         });
 
         RationalCalculator r = new RationalCalculator((Number x, Number y) -> {
-            
+
 
             double gemN = x.getB() * y.getB();
 
@@ -186,6 +186,7 @@ public class MainCalculator {
         int eingabe = Integer.parseInt(s.nextLine());
         if (eingabe == 5) {
             operation();
+            
         }
         return eingabe;
     }
