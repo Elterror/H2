@@ -171,6 +171,7 @@ public class MainCalculator {
             case 4:
                 System.exit(0);
                 break;
+
                 
         }
 
